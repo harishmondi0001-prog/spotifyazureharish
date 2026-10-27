@@ -1,0 +1,15 @@
+{
+	"name": "df-spotisyazureharish",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b22cc15e-ae79-48ed-84e3-b77622527499",
+		"tenantId": "d3f42e27-860d-4489-9e16-2f007ddb234c"
+	}
+}
