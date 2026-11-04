@@ -133,9 +133,14 @@
 			{
 				"name": "update_last_cdc_timestamp",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "max_timstamp",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -151,7 +156,7 @@
 							{
 								"name": "cdc",
 								"value": {
-									"value": "sacvfvscx",
+									"value": "@{activity('max_timstamp').output.resultSets[1].rows[0].cdc}activity('last_cdc_timestamp').output.count",
 									"type": "Expression"
 								}
 							}
