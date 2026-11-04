@@ -156,7 +156,7 @@
 							{
 								"name": "cdc",
 								"value": {
-									"value": "@{activity('max_timstamp').output.resultSets[1].rows[0].cdc}activity('last_cdc_timestamp').output.count",
+									"value": "@{activity('max_timstamp').output.resultSets[0].rows[0].cdc}activity('last_cdc_timestamp').output.count",
 									"type": "Expression"
 								}
 							}
