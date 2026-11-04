@@ -98,6 +98,23 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "current_timestamp",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "current_timestamp",
+					"value": {
+						"value": "@utcNow()",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
@@ -109,6 +126,11 @@
 			},
 			"cdc_date_timestamp": {
 				"type": "string"
+			}
+		},
+		"variables": {
+			"current_timestamp": {
+				"type": "String"
 			}
 		},
 		"annotations": []
