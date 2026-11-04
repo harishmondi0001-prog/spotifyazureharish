@@ -1,5 +1,5 @@
 {
-	"name": "Json1",
+	"name": "json_cdc",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "datalakeconnection",
