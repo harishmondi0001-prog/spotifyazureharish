@@ -131,11 +131,22 @@
 				}
 			},
 			{
-				"name": "If Condition1",
+				"name": "ifincremental",
 				"type": "IfCondition",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Azuresqltodatalake",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
+					"expression": {
+						"value": "@greater(activity('Azuresqltodatalake').output.dataRead,0 )",
+						"type": "Expression"
+					},
 					"ifTrueActivities": [
 						{
 							"name": "update_last_cdc_timestamp",
