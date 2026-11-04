@@ -30,6 +30,17 @@
 				]
 			}
 		],
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"table": {
+				"type": "string"
+			},
+			"cdc_date_timestamp": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
